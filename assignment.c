@@ -38,7 +38,7 @@ int main()
   // SUM
   if(ROWS1 != ROWS2 || COLS1 != COLS2)
   {
-    printf("----------------------\nMatrix sizes are not the same so we can't add them\n----------------------\n");
+    printf("--------------------------------------------------\nMatrix sizes are not the same so we can't add them\n--------------------------------------------------\n");
   }
   else
   {
