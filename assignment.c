@@ -55,6 +55,7 @@ int main()
   {
     printf("Matrix-1 row and Matrix-2 colon num isn't equal therefore we can not multiply\n");
   }
+  return 0;
 }
 
 void randomValueGenerator(int a[ROWS1][COLS1],int b[ROWS2][COLS2])
