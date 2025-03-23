@@ -11,7 +11,7 @@
 #if (ROWS1 == COLS2)
 int target[ROWS1][COLS2]; // for multiplication
 #else
-printf("Can't multiply");return 1;
+printf("Can't multiply or add up quitting...\n");return 1;
 #endif 
 
 int array1[ROWS1][COLS1];
