@@ -64,14 +64,14 @@ void randomValueGenerator(int a[ROWS1][COLS1],int b[ROWS2][COLS2])
   {
     for(size_t j = 0;j<COLS1;j++)
     {
-      a[i][j] = rand()%10 +1;
+      a[i][j] = rand()%100 +1;
     }
   }
   for(size_t i = 0;i<ROWS2;i++)
   {
     for(size_t j = 0;j<COLS2;j++)
     {
-      b[i][j] = rand()%10 +1;
+      b[i][j] = rand()%100 +1;
     }
   }
 
