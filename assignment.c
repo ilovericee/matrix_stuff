@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -12,7 +13,7 @@ int array1[ROWS1][COLS1];
 int array2[ROWS2][COLS2];
 
 
-void randomValueGenerator(int a[ROWS1][COLS1],int b[ROWS2][COLS2]);
+void randomValueGenerator(size_t row,size_t col,int matrix[row][col]);
 void printMat(size_t row,size_t col,int matrix[row][col]);
 void matSum(int a[ROWS1][COLS1],int b[ROWS2][COLS2],int target[ROWS1][COLS2]);
 void matMul(int a[ROWS1][COLS1],int b[ROWS2][COLS2],int target[ROWS1][COLS2]);
@@ -28,7 +29,8 @@ int main()
   int target[ROWS1][COLS2]; // for multiplication
 
   srand(time(NULL));
-  randomValueGenerator(array1,array2);
+  randomValueGenerator(ROWS1,COLS1,array1);
+  randomValueGenerator(ROWS2,COLS2,array2);
   neutralizeTarget(target);
     
   printf("-----------*Matrix-1*-----------\n");
@@ -57,23 +59,15 @@ int main()
   return 0;
 }
 
-void randomValueGenerator(int a[ROWS1][COLS1],int b[ROWS2][COLS2])
+void randomValueGenerator(size_t row,size_t col ,int matrix[row][col])
 {
-  for(size_t i = 0;i<ROWS1;i++)
+  for(size_t i = 0;i<row;i++)
   {
-    for(size_t j = 0;j<COLS1;j++)
+    for(size_t j = 0;j<col;j++)
     {
-      a[i][j] = rand()%100 +1;
+      matrix[i][j] = rand()%100 + 1;
     }
   }
-  for(size_t i = 0;i<ROWS2;i++)
-  {
-    for(size_t j = 0;j<COLS2;j++)
-    {
-      b[i][j] = rand()%100 +1;
-    }
-  }
-
 }
 
 void printMat(size_t row,size_t col,int matrix[row][col])
