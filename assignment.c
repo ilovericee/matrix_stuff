@@ -50,15 +50,10 @@ int main()
     printMat(ROWS1,COLS2,target);
   }
   // MULTIPLICATION
-  if(COLS1 == ROWS2){
   neutralizeTarget(target);
   matMul(array1,array2,target);
   printMat(ROWS1,COLS2,target);
-  }
-  else
-  {
-    printf("Matrix-1 row and Matrix-2 colon num isn't equal therefore we can not multiply\n");
-  }
+  
   return 0;
 }
 
