@@ -12,9 +12,6 @@ int array1[ROWS1][COLS1];
 int array2[ROWS2][COLS2];
 
 
-
-int did_print = 0;
-
 void randomValueGenerator(int a[ROWS1][COLS1],int b[ROWS2][COLS2]);
 void printMat(size_t row,size_t col,int matrix[row][col]);
 void matSum(int a[ROWS1][COLS1],int b[ROWS2][COLS2],int target[ROWS1][COLS2]);
